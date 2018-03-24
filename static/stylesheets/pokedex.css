@@ -2,12 +2,12 @@
 body {
 	background: white;
 }
+
 /*INDEX*/
 .pokemon-sprite-small{
-	/*float: left;*/
 	width: 150px;
-	/*height: 150px*/
 }
+
 h1 {
 	text-align: center;
 }
@@ -16,21 +16,21 @@ li {
 	text-align: center;
 	display: inline-block;
 }
+
 .pokemon-wrapper {
 	padding: 30px;
 	margin: 30px;
 	text-align: center;
 	display: inline-block;
-
 }
+
 nav {
 	text-align: left;
-	
 	position: fixed;
 	padding: 10px;
 	background: lightblue;
-	
 }
+
 ul {
 	margin-left: 60px;
 }

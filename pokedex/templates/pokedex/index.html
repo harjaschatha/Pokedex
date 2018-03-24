@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
 	<h1>List of Pokemons</h1>
 	<nav>
 		<h4>List of Generations</h4>
@@ -13,21 +12,17 @@
 			<li>
 				<a href="#152">Generation 2</a>
 			</li>
-		</ol>	
+		</ol>
 	</nav>
-
  	<ul>
 		{% for pokemon in pokemons %}
-
 			<div class="pokemon-wrapper" id = "{{ pokemon.dex }}">
-				
 				<li>
 					<a href="{% url 'detail' pokemon.dex %}">
 						<img src='{{ pokemon.img }}' class="pokemon-sprite-small">
 						<br>
 					</a>
-
-					{{ pokemon.dex }}. 
+					{{ pokemon.dex }}.
 					<a href="{% url 'detail' pokemon.dex %}">{{ pokemon.name }}</a>
 				</li>
 			</div>
@@ -35,7 +30,6 @@
 				<br>
 				<hr>
 			{% endif %}
-
 		{% endfor %}
 	</ul>
 <hr>
