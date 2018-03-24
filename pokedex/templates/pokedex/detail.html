@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<img src="{{ pokemon.img }}" class="pokemon-sprite">
+
+	{{ pokemon.name }}
+	<br>
+	{{ pokemon.dex }}
+	<br>
+	{{ pokemon.types }}
+	<br>
+	{{ pokemon.species }}
+	<br>
+	{{ pokemon.height }}
+	<br>
+	{{ pokemon.weight }}
+
+{% endblock %}
