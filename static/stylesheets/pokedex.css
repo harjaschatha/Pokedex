@@ -1,21 +1,29 @@
 /*GLOBAL*/
 body {
-	
 }
 
-/*INDEX*/
-/*.pokemon-sprite-small{
-	width: 150px;
-}*/
+/* INDEX */
+.pokemon-grid {
+  margin-top: 50px;
+}
 
-/*.pokemon-wrapper {
-	padding: 30px;
-	margin: 30px;
-	text-align: center;
-	display: inline-block;
-}*/
+.pokemon-grid .row {
+  margin-bottom: 30px;
+}
 
-/*DETAIL PAGE*/
-/*.pokemon-sprite {
-	float: left;
-}*/
+.pokemon-wrapper {
+	height: 300px;
+  width: 100%;
+}
+
+.pokemon-wrapper .pokemon-image {
+  height: 150px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.pokemon-wrapper .pokemon-name {
+  text-align: center;
+  margin-top: 20px;
+}

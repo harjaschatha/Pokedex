@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
+{% load pokedex_extras %}
 
 {% block body %}
- 	<ul>
-		{% for pokemon in pokemons %}
-			<div class="pokemon-wrapper" id="{{ pokemon.dex }}">
-				<li>
-					<a href="{% url 'detail' pokemon.dex %}">
-						<img src='{{ pokemon.img }}' class="pokemon-sprite-small">
-						<br>
-					</a>
-					{{ pokemon.dex }}.
-					<a href="{% url 'detail' pokemon.dex %}">{{ pokemon.name }}</a>
-				</li>
-			</div>
-			{% if pokemon.dex == "151" %}
-				<br>
-				<hr>
-			{% endif %}
+	<div class="pokemon-grid">
+	  {% for chunk in pokemons|chunks:3 %}
+		  <div class="row">
+		    {% for pokemon in chunk %}
+		      <div class="col-md">
+		      	<a href="{% url 'detail' pokemon.dex %}">
+			      	<div class="pokemon-wrapper">
+				      	<img class="pokemon-image" src="{{ pokemon.img }}" />
+				      	<p class="pokemon-name">#{{ pokemon.dex}} <strong>{{ pokemon.name}}</strong></p>
+				      </div>
+				     </a>
+		      </div>
+		    {% endfor %}
+		  </div>
 		{% endfor %}
-	</ul>
-<hr>
+	</div>
+
 {% endblock %}
