@@ -29,19 +29,24 @@
     </nav>
 	</header>
 
-	<main>
-    <div class="container">
-  		{% block body %}
-  		{% endblock %}
-    </div>
-	</main>
+      {% block aside %}
+      {% endblock %}	
+
+
+        <main>
+          <div class="container">
+          {% block body %}
+          {% endblock %}
+          </div>
+        </main>
+  
 
 	<br>
 
 	<footer>
     <div class="container">
     	<hr>
-    	<p>Hi <a href="http://ratiksharma.com/">Ratik</a>, thank you for your help on this.</p>
+    	<p>Hi <a href="http://ratiksharma.com/" target="_blank">Ratik</a>, thank you for your help on this.</p>
     </div>
 	</footer>
 

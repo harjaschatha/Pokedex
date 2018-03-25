@@ -5,14 +5,14 @@ body {
 }
 
 a {
-  color: rgba(0,0,0,1);
+  color: rgba(0,0,0,0.6);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
   text-decoration: none;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,1);
 }
 
 /* INDEX */
@@ -45,4 +45,14 @@ a:hover {
 .pokemon-wrapper .pokemon-name {
   text-align: center;
   margin-top: 20px;
+}
+
+.internal-nav {
+  position: fixed;
+  border: 2px solid rgba(0,0,0,0.4);
+  text-align: center;
+  margin-left:10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 10px;
 }
