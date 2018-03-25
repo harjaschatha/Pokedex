@@ -8,10 +8,13 @@
 
 {% block body %}
   <h1 class="splash-page"> {{ pokemon.name }} </h1>
+  
   <br>
+  
   <div  class="pokemon-sprite-detail">
     <img src="{{ pokemon.img }}" height="450" width="450">
   </div>
+
   <article class="pokemon-details">
     
      Name: <strong>{{ pokemon.name }}</strong>
@@ -25,5 +28,8 @@
      Height: <strong>{{ pokemon.height }}</strong>
       <br>
      Weight: <strong>{{ pokemon.weight }}</strong>
+      <br>
+     Type Defenses: <strong>TBA</strong>
+  
   </article>
 {% endblock %}
