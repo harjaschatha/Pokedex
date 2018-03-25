@@ -56,3 +56,22 @@ a:hover {
   border-radius: 10px;
   padding: 10px;
 }
+
+.pokemon-sprite-detail {
+  float: right;
+  border: 2px solid rgba(0,0,0,0.6);
+  border-radius: 500px;
+  background-color: #eee;
+  max-height: 450px;
+  max-width: 450px;
+
+}
+
+.splash-page {
+  text-align: center;
+  font-size: 100px;
+}
+
+.pokemon-details {
+  margin-top: 125px;
+}

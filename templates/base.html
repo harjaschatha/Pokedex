@@ -2,7 +2,10 @@
 <html>
 <head>
 	{% load staticfiles %}
-	<title>Pokedex</title>
+
+{% block title %}
+{% endblock %}
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href='{% static "stylesheets/pokedex.css" %}'>
 </head>
@@ -46,7 +49,7 @@
 	<footer>
     <div class="container">
     	<hr>
-    	<p>Hi <a href="http://ratiksharma.com/" target="_blank">Ratik</a>, thank you for your help on this.</p>
+    	<p>Hi <a href="http://ratiksharma.com/" target="_blank"><em>Ratik</em></a>, thank you for your help on this.</p>
     </div>
 	</footer>
 
