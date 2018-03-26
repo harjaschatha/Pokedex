@@ -2,10 +2,7 @@
 <html>
 <head>
 	{% load staticfiles %}
-
-{% block title %}
-{% endblock %}
-
+	<title>Pokedex</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href='{% static "stylesheets/pokedex.css" %}'>
 </head>
@@ -32,24 +29,19 @@
     </nav>
 	</header>
 
-      {% block aside %}
-      {% endblock %}	
-
-
-        <main>
-          <div class="container">
-          {% block body %}
-          {% endblock %}
-          </div>
-        </main>
-  
+	<main>
+    <div class="container">
+  		{% block body %}
+  		{% endblock %}
+    </div>
+	</main>
 
 	<br>
 
 	<footer>
     <div class="container">
     	<hr>
-    	<p>Hi <a href="http://ratiksharma.com/" target="_blank"><em>Ratik</em></a>, thank you for your help on this.</p>
+    	<p>Hi <a href="http://ratiksharma.com/">Ratik</a>, thank you for your help on this.</p>
     </div>
 	</footer>
 
