@@ -1,37 +1,22 @@
 {% extends 'base.html' %}
 {% load pokedex_extras %}
 
-{% block title %}
-  <title>Pokedex</title>
-{% endblock %}
-
-{% block aside %}
-
-  <aside class="internal-nav">  
-    <a href="#1">Generation 1</a>
-    <br>
-    <a href="#152">Generation 2</a>
-  </aside>
-
-{% endblock %}
-
 {% block body %}
+	<div class="pokemon-grid">
+	  {% for chunk in pokemons|chunks:3 %}
+		  <div class="row">
+		    {% for pokemon in chunk %}
+		      <div class="col-md">
+		      	<a href="{% url 'detail' pokemon.dex %}">
+			      	<div class="pokemon-wrapper">
+				      	<img class="pokemon-image" src="{{ pokemon.img }}" />
+				      	<p class="pokemon-name">#{{ pokemon.dex}} <strong>{{ pokemon.name}}</strong></p>
+				      </div>
+				     </a>
+		      </div>
+		    {% endfor %}
+		  </div>
+		{% endfor %}
+	</div>
 
-  <div class="pokemon-grid">
-    {% for chunk in pokemons|chunks:3 %}
-      <div class="row">
-        {% for pokemon in chunk %}
-          <div class="col-md"  id="{{ pokemon.dex }}">
-            <a href="{% url 'detail' pokemon.dex %}">
-              <div class="pokemon-wrapper">
-                <img class="pokemon-image" src="{{ pokemon.img }}">
-                <p class="pokemon-name">#{{ pokemon.dex}} <strong>{{ pokemon.name}}</strong></p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
- 
 {% endblock %}
