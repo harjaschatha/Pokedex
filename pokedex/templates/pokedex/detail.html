@@ -7,29 +7,24 @@
 {% endblock %}
 
 {% block body %}
-  <h1 class="splash-page"> {{ pokemon.name }} </h1>
-  
-  <br>
-  
-  <div  class="pokemon-sprite-detail">
-    <img src="{{ pokemon.img }}" height="450" width="450">
-  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="display-2 text-center"> {{ pokemon.name }} </p>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="pokemon-details col-md-4">
+      <p class="detail-info">Name: <strong>{{ pokemon.name }}</strong></p>
+      <p class="detail-info">National Dex Number: <strong>#{{ pokemon.dex }}</strong></p>
+      <p class="detail-info">Type: <strong>{{ pokemon.types }}</strong></p>
+      <p class="detail-info">Species: <strong>{{ pokemon.species }}</strong></p>
+      <p class="detail-info">Height: <strong>{{ pokemon.height }}</strong></p>
+      <p class="detail-info">Weight: <strong>{{ pokemon.weight }}</strong>
+      <p class="detail-info">Type Defenses: <strong>TBA</strong></p>
+    </div>
 
-  <article class="pokemon-details">
-    
-     Name: <strong>{{ pokemon.name }}</strong>
-      <br>
-     National Dex Number: <strong>#{{ pokemon.dex }}</strong>
-      <br>
-     Type: <strong>{{ pokemon.types }}</strong>
-      <br>
-     Species: <strong>{{ pokemon.species }}</strong>
-      <br>
-     Height: <strong>{{ pokemon.height }}</strong>
-      <br>
-     Weight: <strong>{{ pokemon.weight }}</strong>
-      <br>
-     Type Defenses: <strong>TBA</strong>
-  
-  </article>
+    <div class="col-md-4 order-sm-4 order-1">
+      <img src="{{ pokemon.img }}" class="detail-img img-fluid">
+    </div>
+  </div>
 {% endblock %}
