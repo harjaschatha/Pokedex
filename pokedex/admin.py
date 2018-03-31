@@ -32,6 +32,7 @@ class MoveResource(resources.ModelResource):
 
 
 class MoveAdmin(ImportExportModelAdmin):
+    list_display = ('name', 'element', 'category', 'power', 'accuracy', 'pp')
     resource_class = MoveResource
 
 # Register
