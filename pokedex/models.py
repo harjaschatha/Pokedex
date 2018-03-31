@@ -14,6 +14,21 @@ class Pokemon(models.Model):
 		return '{}'.format(self.name)
 
 
+class Move(models.Model):
+    name = models.CharField(max_length=200)
+    element = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
+    power = models.CharField(max_length=50)
+    accuracy = models.CharField(max_length=50)
+    pp = models.CharField(max_length=50)
+    description = models.TextField()
+    zmove = models.CharField(max_length=200)
+    tm = models.BooleanField(default=False)
+
+    def __str__(self):
+        return '{}'.format(self.name)
+
+
 # class Ability(models.Model):
 # 	ability1 = models.CharField(max_length = 200)
 # 	ab1_desc = models.CharField(max_length = 400)
@@ -21,13 +36,3 @@ class Pokemon(models.Model):
 # 	ab2_desc = models.CharField(max_length = 400)
 # 	hiddenab = models.CharField(max_length = 200)
 # 	hiddenab_desc = models.CharField(max_length = 400)
-
-
-# class Moveset(models.Model):
-# 	poke_move = models.CharField(max_length = 200)
-# 	move_eff = models.CharField(max_length = 500)
-# 	move_type = models.CharField(max_length = 200)
-# 	move_cat = models.CharField(max_length = 200)
-# 	move_pow = models.IntegerField()
-# 	move_acc = models.IntegerField()
-# 	move_pp = models.IntegerField()
