@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   	path('', include('pokedex.urls')),
+   	path('pokemon/', include('pokedex.urls')),
+   	path('movelist/', include('moves.urls')),
+    path('', lambda request: HttpResponse("Is this what you made me do? <br/>HUH??")),
 ]

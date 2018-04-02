@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pokedex.apps.PokedexConfig',
     'import_export',
+    'moves.apps.MovesConfig',
 ]
 
 MIDDLEWARE = [
