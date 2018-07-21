@@ -20,11 +20,27 @@
       <p class="detail-info">Species: <strong>{{ pokemon.species }}</strong></p>
       <p class="detail-info">Height: <strong>{{ pokemon.height }}</strong></p>
       <p class="detail-info">Weight: <strong>{{ pokemon.weight }}</strong>
-      <p class="detail-info">Type Defenses: <strong>{{ defenses }}</strong></p>
     </div>
+
 
     <div class="col-md-4 order-sm-4 order-1">
       <img src="{{ pokemon.img }}" class="detail-img img-fluid">
     </div>
   </div>
+  <div class='row'>
+    <p class="detail-info">Type Defenses:</p>
+    <div class="table-responsive-sm">
+      <table class="table">
+        <tbody>
+          {% for key, value in defenses.items %}          
+            <tr>
+              <th scope="row">{{ key }}</th>
+              {% for item in value %}
+              <td>{{ item }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}  
+        </tbody>
+      </table>
+    </div>
 {% endblock %}
