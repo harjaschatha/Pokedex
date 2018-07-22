@@ -9,11 +9,11 @@
 {% block body %}
   <div class="row">
     <div class="col-md-12">
-      <p class="h1 text-center"> {{ pokemon.name }} </p>
+      <p class="h1 text-center mt-4 mb-4"> {{ pokemon.name }} </p>
     </div>
   </div>  
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
       <p class="detail-info">Name: <strong>{{ pokemon.name }}</strong></p>
       <p class="detail-info">National Dex Number: <strong>#{{ pokemon.dex }}</strong></p>
       <p class="detail-info">Type: <strong>{{ pokemon.types }}</strong></p>
@@ -28,20 +28,22 @@
     </div>
   </div>
   <div class='row'>
-    <p class="detail-info">Type Defenses:</p>
-  </div>  
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <tbody>
-          {% for key, value in defenses.items %}          
-            <tr>
-              <th scope="row">{{ key }}</th>
-              {% for item in value %}
-              <td>{{ item }}</td>
-              {% endfor %}
-            </tr>
-          {% endfor %}  
-        </tbody>
-      </table>
+    <div class='col-md-12'>
+      <p class="detail-info mt-4">Type Defenses:</p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <tbody>
+            {% for key, value in defenses.items %}          
+              <tr>
+                <th scope="row">{{ key }}</th>
+                {% for item in value %}
+                  <td>{{ item }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}  
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>  
 {% endblock %}
