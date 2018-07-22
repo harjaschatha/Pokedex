@@ -1,9 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Move List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load pokedex_extras %}
 
-</body>
-</html>
+{% block title %}
+  <title>Move List</title>
+{% endblock %}
+
+{% block body %}
+
+  <div class="table-responsive">
+    <table class="table table-bordered mt-5">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Category</td>
+          <td>Power</td>
+          <td>Accuracy</td>
+          <td>PP</td>
+        </tr>
+      </thead>  
+      <tbody>
+        {% for move in moves %}
+          <tr>
+            <th scope="row">{{ move.name }}</th>
+            <td>{{ move.category }}</td>
+            <td>{{ move.power }}</td>
+            <td>{{ move.accuracy }}</td>
+            <td>{{ move.pp }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>  
+
+
+{% endblock %}
