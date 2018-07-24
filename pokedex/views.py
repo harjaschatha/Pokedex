@@ -33,12 +33,6 @@ def detail(request, dex):
             for _ in range(diff):
                 value.append('-')
             
-        # elif len(value) == 0:
-        #     value = list(value)
-        #     print("value =", value)
-        #     for _ in range(max_len):
-        #         value.append('-')
-
 
     defenses_new = {}
     for key in defenses.keys():

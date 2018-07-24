@@ -10,9 +10,9 @@ def movelist(request):
 
 	return render(request, template, context)
 
-def details(request, name):
-	move_name = Move.objects.get(name__exact=name)
+def detail(request, slug):
+	move = Move.objects.get(slug__exact=slug)
 	template = 'moves/detail.html'
-	context = { 'move': move_name }
+	context = { 'move': move }
 
 	return render(request, template, context)
