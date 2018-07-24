@@ -14,9 +14,6 @@ class Move(models.Model):
     tm = models.BooleanField(default=False)
     slug = models.CharField(max_length=100, default='')
 
-    # def __init__(self):
-    #     slug = self.generate_slug(self.name)
-
     def __str__(self):
         return '{}'.format(self.name)
 
