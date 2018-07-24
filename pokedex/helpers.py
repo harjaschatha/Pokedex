@@ -162,7 +162,7 @@ def generate_defenses(type1, type2):
                     if len(defenses[str(bracket)]) > 0:
                         pass
                     else:
-                        defenses[str(bracket)] = set('')
+                        defenses[str(bracket)] = []
 
     print("{} x {}\n".format(type1, type2))
     pprint(defenses)

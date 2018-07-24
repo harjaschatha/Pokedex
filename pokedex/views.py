@@ -21,15 +21,25 @@ def detail(request, dex):
     	type2 = ''
     defenses = generate_defenses(type1, type2)
     
+    print(defenses)
     len_list = []
     for value in defenses.values():
         len_list.append(len(value))
     max_len = max(len_list)
+
     for value in defenses.values():
         if len(value) < max_len:
             diff = max_len - len(value)
             for _ in range(diff):
                 value.append('-')
+            
+        # elif len(value) == 0:
+        #     value = list(value)
+        #     print("value =", value)
+        #     for _ in range(max_len):
+        #         value.append('-')
+
+
     defenses_new = {}
     for key in defenses.keys():
         if key == '0.0':
@@ -47,6 +57,6 @@ def detail(request, dex):
  
 
     template = 'pokedex/detail.html'
-    context = { 'pokemon': pokemon, 'defenses': defenses_new}
+    context = { 'pokemon': pokemon, 'defenses': defenses_new }
     	
     return render(request, template, context)
