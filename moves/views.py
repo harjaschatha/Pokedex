@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Move
 
 
-def movelist(request):
+def index(request):
 	all_moves = Move.objects.all()
 	template = 'moves/index.html'
 	context = { 'moves': all_moves }

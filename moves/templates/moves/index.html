@@ -22,7 +22,7 @@
         {% for move in moves %}
           <tr>
             <th scope="row">
-              <a href="{% url 'detail' move.slug %}">{{ move.name }}</a>
+              <a href="{% url 'moves:detail' move.slug %}">{{ move.name }}</a>
             </th>
             <td>{{ move.category }}</td>
             <td>{{ move.power }}</td>

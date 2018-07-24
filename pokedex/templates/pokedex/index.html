@@ -21,7 +21,7 @@
       <div class="row">
         {% for pokemon in chunk %}
           <div class="col-md"  id="{{ pokemon.dex }}">
-            <a href="{% url 'detail' pokemon.dex %}">
+            <a href="{% url 'pokedex:detail' pokemon.dex %}">
               <div class="pokemon-wrapper">
                 <img class="pokemon-image" src="{{ pokemon.img }}">
                 <p class="pokemon-name">#{{ pokemon.dex}} <strong>{{ pokemon.name}}</strong></p>

@@ -5,7 +5,7 @@ from . import views
 
 
 urlpatterns = [
-	path('', views.movelist, name='movelist'),
+	path('', views.index, name='index'),
 	
 	path('<slug:slug>/', views.detail, name='detail'),
 ]

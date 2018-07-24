@@ -19,7 +19,7 @@ from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   	path('pokemon/', include('pokedex.urls')),
-   	path('movelist/', include('moves.urls')),
+   	path('pokedex/', include(('pokedex.urls', 'pokedex'), namespace='pokedex')),
+   	path('moves/', include(('moves.urls', 'moves'), namespace='moves')),
     path('', lambda request: HttpResponse("Is this what you made me do? <br/>HUH??")),
 ]
