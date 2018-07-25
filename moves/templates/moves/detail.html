@@ -8,6 +8,21 @@
 
 {% block body %}
 
+<div class="row">
+    <div class="col-md-12">
+      <p class="h1 text-center mt-4 mb-4"> {{ move.name }} </p>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-md-8">
+      <p class="detail-info">Name: <strong>{{ move.name }}</strong></p>
+      <p class="detail-info">Category: <strong>{{ move.category }}</strong></p>
+      <p class="detail-info">Element: <strong>{{ move.element }}</strong></p>
+      <p class="detail-info">Power: <strong>{{ move.power }}</strong></p>
+      <p class="detail-info">Accuracy: <strong>{{ move.accuracy }}%</strong></p>
+      <p class="detail-info">PP: <strong>{{ move.pp }}</strong>
+      <p class="detail-info">Description: <strong>{{ move.description }}</strong>	
+    </div>
 
 
 {% endblock %}
